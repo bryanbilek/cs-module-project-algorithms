@@ -15,9 +15,11 @@ def sliding_window_max(nums, k):
         m = max(window)
         start += 1
         end += 1
-    
+        print(f'm is: {m}')
+        print(f'start is {start}')
+        print(f'end is {end}')
+        
     return m
-    
 
 
 if __name__ == '__main__':

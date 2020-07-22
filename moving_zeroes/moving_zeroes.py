@@ -5,20 +5,16 @@ Returns: a List of integers
 def moving_zeroes(arr):
     # Your code here
     # move the zeros to the right side
-    # could try popping the zeros out & appending them at the end
-    zeros = []
+    # could try popping the zeros off, appending them to a new, empty array
+    # then extend that new array to the current one
 
     for x in arr:
         if x == 0:
-            arr.pop(x)
+            arr.pop(arr.index(x))
+            arr.append(x)
             print(arr)
-            zeros.append(x)
-            print(zeros)
 
-    return arr.extend(zeros)
-
-
-            
+    return arr           
 
 
 if __name__ == '__main__':
