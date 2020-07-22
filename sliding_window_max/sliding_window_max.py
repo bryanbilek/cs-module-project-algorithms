@@ -4,8 +4,20 @@ Returns: a List of integers
 '''
 def sliding_window_max(nums, k):
     # Your code here
+    # k represents the number of values starting at index 0 & returns the max value
+    # then k moves at the same size one index over
+    # slice through nums 
+    start = 0
+    end = k
+    window = nums[start:end]
 
-    pass
+    while end != len(nums):
+        m = max(window)
+        start += 1
+        end += 1
+    
+    return m
+    
 
 
 if __name__ == '__main__':

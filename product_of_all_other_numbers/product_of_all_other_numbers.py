@@ -4,8 +4,17 @@ Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
     # Your code here
+    # each index represents the product of the other numbers in the array
+    # loop through the array & return the entire array multiplied together minus
+    # that number being looped through
+    import math
 
-    pass
+    x = [math.prod(arr)//num for num in arr]
+
+    return x
+
+    # for num in arr:
+    #     math.prod(arr) // num
 
 
 if __name__ == '__main__':
